@@ -47,7 +47,7 @@ function Trendy() {
   }
 
   return (
-    <div className="mt-5 mb-10 flex flex-col gap-5 flex-wrap ">
+    <div className="mt-5 mb-10 flex flex-col gap-5 ">
       <div className="flex justify-center font-semibold text-4xl">
         Trendy Product
       </div>
