@@ -30,7 +30,7 @@ function Cart() {
     const removeDataFromCart=async(id)=>{
       const removeStatusFromCart=await jsonRemoveCartDataFromServer(id)
        console.log("removeStatusFromCart",removeStatusFromCart)
-       if(removeStatusFromCart?.statusText==="OK"){dispatch(manageCartCountFromSlice(-1))}
+       if(removeStatusFromCart?.status>=200&&removeStatusFromCart?.status<300){dispatch(manageCartCountFromSlice(-1))}
        getCartDataFromCart()
     }
     

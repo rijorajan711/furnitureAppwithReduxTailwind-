@@ -30,14 +30,15 @@ function Wishlist() {
     const productDetailsSplit={title:title,price:price,image1:image1,image2:image2}
     const jsonCartResponseToTrendy=await jsonAddToCart(productDetailsSplit)
     await removeDataFromWishlist(id)
-    if(jsonCartResponseToTrendy.statusText==="Created"){dispatch(manageCartCountFromSlice(1));toast.warning("Item Added To Cart")}else{toast.warning("Item Not Added To Cart Due To Some Network Problem")}
+    if(jsonCartResponseToTrendy.status>=200&&jsonCartResponseToTrendy.status<300){dispatch(manageCartCountFromSlice(1));toast.warning("Item Added To Cart")}else{toast.warning("Item Not Added To Cart Due To Some Network Problem")}
 }
 
   
   const removeDataFromWishlist=async(id)=>{
        console.log("wishlist iddddddddddddd",id)
        const removeStatusFromWishlist=await jsonRemoveWishlistDataFromServer(id)
-       if(removeStatusFromWishlist?.statusText==="OK"){dispatch(manageWishlistCountFromSlice(-1))}
+       console.log(removeStatusFromWishlist)
+       if(removeStatusFromWishlist.status>=200&&removeStatusFromWishlist.status<300){dispatch(manageWishlistCountFromSlice(-1))}
        getWishlistDataFromWishlist()
   }
   

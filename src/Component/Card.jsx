@@ -14,7 +14,7 @@ function Card({product}) {
     const productDetailsSplit={title:title,price:price,image1:image1,image2:image2}
     const jsonWishlistResponseToTrendy=await jsonAddToWishlist(productDetailsSplit)
     console.log("duuuplicationnnn",jsonWishlistResponseToTrendy)
-    if(jsonWishlistResponseToTrendy.statusText==="Created"){dispatch(manageWishlistCountFromSlice(1));alert("Item Added To Wishlist") }else{alert("Item Not Added To Wishlist Due To Some Network Problem")}
+    if(jsonWishlistResponseToTrendy.status>=200&&jsonWishlistResponseToTrendy.status<300){dispatch(manageWishlistCountFromSlice(1));alert("Item Added To Wishlist") }else{alert("Item Not Added To Wishlist Due To Some Network Problem")}
    
     
 }
@@ -23,7 +23,7 @@ const addToCartFromCard=async({title,price,image1,image2})=>{
   const productDetailsSplit={title:title,price:price,image1:image1,image2:image2}
   const jsonCartResponseToTrendy=await jsonAddToCart(productDetailsSplit)
   console.log("Item Added To Cart",jsonCartResponseToTrendy)
-  if(jsonCartResponseToTrendy.statusText==="Created"){dispatch(manageCartCountFromSlice(1));alert("Item Added To Cart")}else{alert("Item Not Added To Cart Due To Some Network Problem")}
+  if(jsonCartResponseToTrendy.status>=200&&jsonCartResponseToTrendy.status<300){dispatch(manageCartCountFromSlice(1));alert("Item Added To Cart")}else{alert("Item Not Added To Cart Due To Some Network Problem")}
 
 }
 
