@@ -1,1 +1,1 @@
-export const backURL="http://localhost:4000"
+export const backURL="https://furniture-app-backend-json.onrender.com"
