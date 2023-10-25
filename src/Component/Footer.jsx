@@ -7,7 +7,7 @@ function Footer() {
 
     
     
-    <div className='flex  justify-around h-80 bg-black opacity-80 text-white pt-11'>
+    <div className='flex justify-around h-80 bg-black opacity-80 text-white pt-11'>
         <div className='flex flex-col justify-evenly '>
          <Link to={"/"}>
           <div className='flex text- text-4xl text-sl gap-2 hover:text-slate-400'>
@@ -35,23 +35,26 @@ function Footer() {
         <div className='flex flex-col justify-evenly'>
             <h1 className='text-2xl'>Link</h1>
 
-            <Link className='hover:text-slate-400 transition duration-500'>Home</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>Shopping</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>View</Link>
+            <Link to={"/"} className='hover:text-slate-400 transition duration-500'>Home</Link>
+            <Link to={"/shopenow"} className='hover:text-slate-400 transition duration-500'>Shopping</Link>
+            <Link to={"/wishlist"} className='hover:text-slate-400 transition duration-500'>WishList</Link>
+            <Link to={"/cart"} className='hover:text-slate-400 transition duration-500'>Cart</Link>
         </div>
 
         <div className='flex flex-col justify-evenly'>
         <h1 className='text-2xl'>Guids</h1>
-             <Link className='hover:text-slate-400 transition duration-500'>Home</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>Shopping</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>View</Link>
+            <Link to={"/"} className='hover:text-slate-400 transition duration-500'>Home</Link>
+            <Link to={"/shopenow"} className='hover:text-slate-400 transition duration-500'>Shopping</Link>
+            <Link to={"/wishlist"} className='hover:text-slate-400 transition duration-500'>WishList</Link>
+            <Link to={"/cart"} className='hover:text-slate-400 transition duration-500'>Cart</Link>
         </div>
 
         <div className='flex flex-col justify-evenly'>
         <h1 className='text-2xl'>Contact</h1> 
-            <Link className='hover:text-slate-400 transition duration-500'>Home</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>Shopping</Link>
-            <Link className='hover:text-slate-400 transition duration-500'>View</Link>
+            <Link to={"/"} className='hover:text-slate-400 transition duration-500'>Home</Link>
+            <Link to={"/shopenow"} className='hover:text-slate-400 transition duration-500'>Shopping</Link>
+            <Link to={"/wishlist"} className='hover:text-slate-400 transition duration-500'>WishList</Link>
+            <Link to={"/cart"} className='hover:text-slate-400 transition duration-500'>Cart</Link>
         </div>
       
     </div>

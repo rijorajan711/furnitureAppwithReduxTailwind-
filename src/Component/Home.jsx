@@ -1,29 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Trendy from "./Trendy";
+import { Link } from "react-router-dom";
+
+
+
 function Home() {
+  const coverImgArray=["https://www.interiio.sg/img/uploads/blog-articles/definitive-guide-to-scandinavian-interior-design-style/09-scandinavian-monochrome.jpg","https://t4.ftcdn.net/jpg/05/51/69/95/360_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg","https://img.freepik.com/premium-photo/interior-modern-living-room-panorama-3d-rendering-generative-ai_786587-12950.jpg"]
+  const [coverIndex,setCoverIndex]=useState(0)
+  
+  
+  
+  const changeCoverImg=(clickStatus,coverIndex)=>{
+   if(clickStatus===1) {if(coverIndex>=2){
+      setCoverIndex(0)
+    }else{
+      setCoverIndex(coverIndex+1)
+    }}else{
+      if(coverIndex<=0){
+        setCoverIndex(2)
+      }else{
+        setCoverIndex(coverIndex-1)
+      }
+    }
+  }
+  
   return (
     <>
    
    
-    <div className="h-[600px] bg-slate-50 mb-10 mt-10 flex flex-row gap-5 justify-center pt-16 ">
+    <div className="h-[600px] bg-slate-50 mb-10 mt-10 flex flex-row gap-5 justify-center pt-16 hover:scale-[1.08] duration-1000 flex-wrap">
       <div className="relative bg-slate-500 h-[520px] w-[800px] rounded-lg">
        <div className="top-40 left-24 text-white absolute z-20 flex flex-col gap-2">
         <h1 className="text-2xl font-semibold">Topsale Collection</h1>
         <h1 className="text-6xl font-bold">Living Room</h1>
         <h1 className="text-6xl font-bold">Furniture</h1>
-        <button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shope Now</button>
+         <Link to={"/shopenow"}><button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shope Now</button></Link>
 
        </div>
     
-      <i className="z-20 absolute top-2/4 text-white left-14 text-5xl fa-solid fa-chevron-left hover:text-zinc-300 cursor-pointer"></i>
+      <button onClick={()=>changeCoverImg(0,coverIndex)}> <i className="z-20 absolute top-2/4 text-white left-14 text-5xl fa-solid fa-chevron-left hover:text-zinc-300 cursor-pointer"></i></button>
     
         
        
         <img
-          src="https://www.interiio.sg/img/uploads/blog-articles/definitive-guide-to-scandinavian-interior-design-style/09-scandinavian-monochrome.jpg"
+          src={coverImgArray[coverIndex]}
           className="absolute top-0 h-full w-full rounded-lg"
         ></img>
-        <i className="z-20 absolute top-2/4 text-white right-14 text-5xl fa-solid fa-chevron-right hover:text-zinc-300 cursor-pointer"></i>
+        <button className="btn" onClick={()=>changeCoverImg(1,coverIndex)}><i className="z-20 absolute top-2/4 text-white right-14 text-5xl fa-solid fa-chevron-right hover:text-zinc-300 cursor-pointer"></i></button>
         <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg hover:opacity-70"></div>
       </div>
       <div className="bg-slate-100 h-[500px] flex flex-col gap-5 rounded-lg">
@@ -31,10 +54,10 @@ function Home() {
 
         <div className="top-10 left-12 text-white absolute z-20 flex flex-col gap-2">
         <h1 className="text-xl font-thin">Clearence</h1>
-        <h1 className="text-xl font-bold">Chairs & Chaises<br></br>
-                                                                    Up to 40% off</h1>
+        <h1 className="text-xl font-bold">Chairs & Chaises<br></br> Up to 40% off</h1>
+                                                                   
       
-        <button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shope Now</button>
+         <Link to={"/shopenow"}><button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shope Now</button></Link>
         
 
        </div>
@@ -49,10 +72,10 @@ function Home() {
            
         <div className="top-10 left-12 text-white absolute z-20 flex flex-col gap-2">
         <h1 className="text-xl font-thin">New In</h1>
-        <h1 className="text-xl font-bold">Best Light<br></br>
-                                                                  Collection For You</h1>
+        <h1 className="text-xl font-bold">Best Light<br></br> Collection For You</h1>
+                                                                 
       
-        <button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shop Now</button>
+        <Link to={"/shopenow"}><button className="btn border w-24 h-14 rounded-xl hover:bg-slate-600">Shop Now</button></Link>
         
 
        </div>
@@ -66,7 +89,7 @@ function Home() {
       </div>
     </div>
      
-  
+
  
     </>
      
