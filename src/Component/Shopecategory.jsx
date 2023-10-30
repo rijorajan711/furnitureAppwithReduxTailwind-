@@ -7,10 +7,10 @@ function Shopecategory() {
     <div className='flex justify-center font-bold text-4xl opacity-75'>
      Shope By Category
     </div>
-    <div className='grid grid-cols-3 gap-5 ml-28 mr-28 mt-10 justify-evenly w=[100%] box-content  '>
+    <div className='grid lg:grid-cols-3 gap-5 ml-28 mr-28 mt-10 justify-evenly w=[100%] box-content  '>
         <div className='group relative lg:grid-cols-3 h=[600px]'>
 
-        <img className='h-full' src="https://t4.ftcdn.net/jpg/05/51/69/95/360_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg" alt="" />
+        <img className='lg:h-[600px]' src="https://t4.ftcdn.net/jpg/05/51/69/95/360_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg" alt="" />
         <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30 rounded-lg hover:opacity-40"></div>
         <h1 className='absolute left-2/4  top-1/2 text-white font-semibold text-3xl gro group-hover:top-96 duration-700'>Outdoor</h1>
         <Link to={"/shopenow"}><button className="btn absolute left-1/3  top-1/2 text-white font-semibold text-2xl border w-48 opacity-0 h-14 rounded-xl hover:bg-slate-200 hover:text-black  group-hover:opacity-100">Shop Now</button></Link>
@@ -23,7 +23,7 @@ function Shopecategory() {
         <div className='group relative h-[48%]'>
         <img className='h-full w-[100%]' src="https://img.freepik.com/premium-photo/painting-spiral-is-wall-room_745528-1937.jpg" alt="" />
         <div class="absolute top-0 left-0 w-full h-full bg-black opacity-10 rounded-lg hover:opacity-40"></div>
-        <h1 className='absolute left-2/4  top-1/2 text-white font-semibold text-3xl gro group-hover:top-56 duration-700'>Outdoor</h1>
+        <h1 className='absolute lg:left-2/4  top-1/2 text-white font-semibold text-3xl gro group-hover:top-56 duration-700'>Outdoor</h1>
         <Link to={"/shopenow"}><button className="btn absolute left-1/3  top-1/2 text-white font-semibold text-2xl border w-48 opacity-0 h-14 rounded-xl hover:bg-slate-200 hover:text-black  group-hover:opacity-100">Shop Now</button></Link>
         </div>
         

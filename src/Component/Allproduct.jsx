@@ -2,6 +2,8 @@ import React from "react";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import { getAllData } from "../helperForAxios/allapi";
+import { ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Allproduct() {
   const [allData, setAllData] = useState([]);
 
@@ -15,6 +17,7 @@ function Allproduct() {
   }, []);
 
   return (
+    <>
     <div className="mt-[60px] mb-10 flex flex-col flex-wrap gap-5 ">
       <div className="flex justify-center font-bold text-4xl opacity-75">
         All Product
@@ -27,6 +30,8 @@ function Allproduct() {
         )}
       </div>
     </div>
+      <ToastContainer position='top-center'  theme='colored' autoClose={500}/>
+    </>
   );
 }
 

@@ -7,7 +7,7 @@ function Footer() {
 
     
     
-    <div className='flex justify-around h-80 bg-black opacity-80 text-white pt-11'>
+    <div className='flex justify-around h-80 bg-black opacity-80 text-white pt-11 flex-wrap'>
         <div className='flex flex-col justify-evenly '>
          <Link to={"/"}>
           <div className='flex text- text-4xl text-sl gap-2 hover:text-slate-400'>
@@ -18,8 +18,8 @@ function Footer() {
        
         
          <div className='flex gap-3 rounded-xl'>
-        <input className='w-96 text-slate-800 text-xl p-2 rounded-lg'></input>
-        <button className='bg-slate-400 w-36 h-12 rounded-lg hover:scale-110'>Submit</button>
+        <input className='lg:w-96 text-slate-800 text-xl p-2 rounded-lg'></input>
+        <button className='bg-slate-400 lg:w-36 h-12 rounded-lg hover:scale-110'>Submit</button>
         </div>
 
         <div className='flex text-2xl gap-5 hover:cursor-pointer'>

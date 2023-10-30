@@ -28,7 +28,7 @@ function Home() {
     <>
    
    
-    <div className="h-[600px] bg-slate-50 mb-10 mt-10 flex flex-row gap-5 justify-center pt-16 hover:scale-[1.08] duration-1000 flex-wrap">
+    <div className="xl:h-[600px]  bg-slate-50 mb-10 mt-10 flex flex-row gap-5 justify-center pt-16 xl:hover:scale-[1.08] duration-1000 flex-wrap">
       <div className="relative bg-slate-500 h-[520px] w-[800px] rounded-lg">
        <div className="top-40 left-24 text-white absolute z-20 flex flex-col gap-2">
         <h1 className="text-2xl font-semibold">Topsale Collection</h1>

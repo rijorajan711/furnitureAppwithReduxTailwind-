@@ -5,7 +5,7 @@ import { UseSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
 import { addToWishlist } from "../redux/wishlistslicee";
 import { addToCart } from "../redux/cartSlice";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { jsonAddToCart } from "../helperForAxios/allapi";
 import { jsonAddToWishlist } from "../helperForAxios/allapi";
 import { manageCartCountFromSlice } from "../redux/cartSlice";
@@ -42,7 +42,7 @@ function Trendy() {
        
         const productDetailsSplit={title:title,price:price,image1:image1,image2:image2}
         const jsonCartResponseToTrendy=await jsonAddToCart(productDetailsSplit)
-        console.log("Item Added To Cart",jsonCartResponseToTrendy)
+     
         if(jsonCartResponseToTrendy.status>=200&&jsonCartResponseToTrendy.status<300){dispatch(manageCartCountFromSlice(1));toast.warning("Item Added To Cart")}else{toast.warning("Item Not Added To Cart Due To Some Network Problem")}
   }
 
@@ -103,7 +103,7 @@ function Trendy() {
         
       </div>
     
-      <ToastContainer position='top-center'  theme='colored' autoClose={500}/>
+      
   
     </div>
   );

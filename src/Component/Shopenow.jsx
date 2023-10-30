@@ -2,8 +2,8 @@ import React from 'react'
 import Card from './Card'
 import { useState, useEffect } from "react";
 import { getAllData } from "../helperForAxios/allapi";
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -41,6 +41,7 @@ function Shopenow() {
        
 
      </div>
+     <ToastContainer position='top-center'  theme='colored' autoClose={500}/>
     </div>
   )
 }

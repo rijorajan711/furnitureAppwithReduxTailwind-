@@ -49,17 +49,17 @@ useEffect(()=>{
   return (
   <>
      
-    <div className='flex justify-around text-lg w-100 bg-white justify-center shadow-sm border-b-4 border-gray-100 h-36 items-center'>
+    <div className='flex justify-around text-lg w-100 bg-white justify-center shadow-sm border-b-4 border-gray-100 lg:h-36  items-center'>
    
         <Link to={"/"}>
-        <div className='flex text- text-4xl text-slate-500 gap-2 text-amber-600'>
+        <div className='flex text- md:text-4xl text-slate-500 gap-2 text-amber-600'>
         <i className="fa-solid fa-registered"></i>
-        <h1 className='text-2xl'>ShoppingMart</h1>
+        <h1 className=' text-2xl'>ShoppingMart</h1>
         </div>
         </Link>
     
-    <div className='flex gap-6'>
-           <Link to={"/"}><h1 className='font-serif hover:text-amber-600 cursor-pointer'>Home</h1></Link>
+    <div className='flex gap-6 flex-wrap  '>
+           <Link to={"/"}><h1 className=' font-serif hover:text-amber-600 cursor-pointer'>Home</h1></Link>
           <div className='relative'>
           <button onClick={handleDropdown}><h1 className='font-serif hover:text-amber-600 cursor-pointer'>Pages <i className="fa-solid fa-angle-down"></i></h1></button> 
           {dropdown&&<div className='flex flex-col gap-4 mt-5 text-center absolute w-40 shadow-2xl h-48 bg-slate-100 z-50  rounded-xl text-amber-600'>
@@ -93,7 +93,7 @@ useEffect(()=>{
     
     
 
-    <div className='flex gap-10 font-semibold text-xl'>
+    <div className='flex gap-10 font-semibold text-xl flex-wrap'>
     <div><i className="fa-solid fa-magnifying-glass "></i></div>
     <div><Link to={'/wishlist'}> <i id='rijo' className="fa-solid fa-cart-plus"></i> <span>WishList</span> <span ><i>{wishlistCount}</i></span></Link></div>
     <div><Link to={'/cart'}> <i id='rijo' className="fa-solid fa-cart-plus"></i> <span>Cart</span><span > <i>{cartCount}</i></span></Link></div>

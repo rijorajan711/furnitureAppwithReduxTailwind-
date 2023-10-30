@@ -52,8 +52,8 @@ function Cart() {
         <h1>Shopping Cart</h1>
      </div>
     { cartProductArray?.length>0?
-     <div className='grid grid-cols-6 gap-5 mt-5 w-full '>
-    <div className='col-span-4 ml-5'>
+     <div className='grid  md:grid-cols-6 gap-5 mt-5 w-full '>
+    <div className='col-span-4  ml-5  '>
       <table className='w-full'>
         <thead >
           
